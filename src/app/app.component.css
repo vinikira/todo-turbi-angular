@@ -1,0 +1,11 @@
+.fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+.active {
+  background-color: #37479F;
+}
+
+.card-container {
+  height: 100%
+}

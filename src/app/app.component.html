@@ -1,7 +1,26 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div class="container">
-  <h1>
-    Todo app turbi!
-  </h1>
-  <router-outlet></router-outlet>
-</div>
+<section class="mat-typography">
+  <mat-toolbar color="primary">
+    <h2>
+      Todo App Turbi
+    </h2>
+
+    <span class="fill-remaining-space"></span>
+    <div fxLayout="row" fxShow="false" fxShow.gt-sm>
+      <button mat-button routerLink="/tasks" routerLinkActive="active">Tarefas</button>
+      <button mat-button routerLink="/task/new" routerLinkActive="active">Nova Tarefa</button>
+    </div>
+    <button mat-button [mat-menu-trigger-for]="menu" fxHide="false" fxHide.gt-sm>
+      <mat-icon>menu</mat-icon>
+    </button>
+
+  </mat-toolbar>
+  <mat-menu x-position="before" #menu="matMenu">
+    <button mat-menu-item routerLink="/tasks">Products</button>
+    <button mat-menu-item routerLink="/tasks/new">Dashboard</button>
+  </mat-menu>
+  <mat-card class="card-container">
+    <mat-card-content>
+      <router-outlet></router-outlet>
+    </mat-card-content>
+  </mat-card>
+</section>

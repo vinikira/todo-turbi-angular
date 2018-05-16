@@ -1,0 +1,11 @@
+.task-card {
+  width: 80%;
+}
+
+.done {
+  border-color: #4CAF50;
+}
+
+.task-tile {
+  border: 1px dashed #ddd;
+}
