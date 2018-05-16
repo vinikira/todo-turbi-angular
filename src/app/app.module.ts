@@ -23,14 +23,14 @@ import {
   MatGridListModule,
   MatSnackBarModule,
   MatDividerModule,
+  MatButtonToggleModule,
   MAT_DATE_LOCALE
 } from '@angular/material';
 
 import { routing } from './app.routing';
 import { TasksComponent } from './tasks/tasks.component';
-import { NewTaskComponent } from './new-task/new-task.component';
+import { TaskFormComponent } from './task-form/task-form.component';
 import { TasksService } from './tasks.service';
-import { KeysPipe } from './keys.pipe';
 
 registerLocaleData(localePTBR, 'pt-BR')
 
@@ -38,8 +38,7 @@ registerLocaleData(localePTBR, 'pt-BR')
   declarations: [
     AppComponent,
     TasksComponent,
-    NewTaskComponent,
-    KeysPipe
+    TaskFormComponent
   ],
   imports: [
     BrowserModule,
@@ -61,6 +60,7 @@ registerLocaleData(localePTBR, 'pt-BR')
     MatGridListModule,
     MatSnackBarModule,
     MatDividerModule,
+    MatButtonToggleModule,
     routing
   ],
   exports: [

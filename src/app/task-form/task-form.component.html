@@ -1,0 +1,29 @@
+<h1 *ngIf="!id">Nova Tarefa</h1>
+<h1 *ngIf="id">Tarefa: {{id}}</h1>
+<mat-form-field class="input-full-width">
+  <input matInput
+    type="text"
+    placeholder="Nome da tarefa"
+    [(ngModel)]="name"
+  />
+</mat-form-field>
+<mat-form-field class="input-full-width">
+  <textarea matInput
+    placeholder="Detalhes da tarefa"
+    [(ngModel)]="detail"
+  ></textarea>
+</mat-form-field>
+<mat-form-field class="input-full-width">
+  <input matInput
+    [matDatepicker]="scheduledPicker"
+    date="true"
+    #start_time="ngModel"
+    placeholder="Quando?"
+    [(ngModel)]="scheduled" />
+  <mat-datepicker-toggle matSuffix [for]="scheduledPicker"></mat-datepicker-toggle>
+  <mat-datepicker #scheduledPicker></mat-datepicker>
+</mat-form-field>
+<button mat-raised-button color="primary" (click)="submitTask(id)">
+  {{id ? 'Salvar' : 'Adicionar'}}
+</button>
+<button mat-raised-button (click)="resetForm()">Limpar</button>

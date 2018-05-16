@@ -17,6 +17,10 @@ export class TasksService {
     return this.http.get(`${this.url}/v1/tasks`)
   }
 
+  getOneTask(task) {
+    return this.http.get(`${this.url}/v1/tasks/${task.id}`)
+  }
+
   createTask(task) {
     const body = JSON.stringify(task);
 
@@ -25,10 +29,19 @@ export class TasksService {
 
   updateTask(task) {
     let body = JSON.stringify(task);
-    return this.http.put(`${this.url}/v1/tasks/` + task.id, body, httpOptions);
+    return this.http.put(`${this.url}/v1/tasks/${task.id}`, body, httpOptions);
   }
 
   deleteTask(task) {
-    return this.http.delete(`${this.url}/v1/tasks/` + task.id);
+    return this.http.delete(`${this.url}/v1/tasks/${task.id}`);
+  }
+
+  setDone(task) {
+    return this.http.put(`${this.url}/v1/tasks/${task.id}/done`, {}, httpOptions);
+  }
+
+  setNotDone(task) {
+    return this.http.put(`${this.url}/v1/tasks/${task.id}/notdone`, {}, httpOptions);
+
   }
 }

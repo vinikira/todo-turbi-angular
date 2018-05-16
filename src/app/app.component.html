@@ -6,8 +6,14 @@
 
     <span class="fill-remaining-space"></span>
     <div fxLayout="row" fxShow="false" fxShow.gt-sm>
-      <button mat-button routerLink="/tasks" routerLinkActive="active">Tarefas</button>
-      <button mat-button routerLink="/task/new" routerLinkActive="active">Nova Tarefa</button>
+      <button mat-button routerLink="/tasks" routerLinkActive="active">
+        <mat-icon>calendar_today</mat-icon>
+        Tarefas
+      </button>
+      <button mat-button routerLink="/task/new" routerLinkActive="active">
+        <mat-icon>add</mat-icon>
+        Nova Tarefa
+      </button>
     </div>
     <button mat-button [mat-menu-trigger-for]="menu" fxHide="false" fxHide.gt-sm>
       <mat-icon>menu</mat-icon>

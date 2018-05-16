@@ -9,3 +9,11 @@
 .task-tile {
   border: 1px dashed #ddd;
 }
+
+.button-float {
+  position: fixed;
+  float: right;
+  z-index:1000;
+  right: 40px;
+  bottom:40px;
+}
