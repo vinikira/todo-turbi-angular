@@ -1,5 +1,10 @@
 # TodoAngular
+Todo app challenge
 
+## Get Started
+On src/environment/environment{.prod.ts, .ts} you must set the `taskApi` propertie to the address where you Todo api is running. The default is: http://localhost:3000.
+
+# Angular CLI Stuff
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
 
 ## Development server
